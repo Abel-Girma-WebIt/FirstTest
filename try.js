@@ -2,6 +2,8 @@ let selection=document.querySelectorAll("li");
 let addToCart=document.querySelectorAll("a");
 
 let imagAll=document.querySelectorAll(".imageDivs");
+let sumbitBtn=document.querySelector("#commentSubmit");
+let inputfield=document.querySelectorAll(".contact-deatil");
 // let imagLap=document.querySelectorAll(".laptops");
 // let imagSho=document.querySelectorAll(".shoes");
 // let imagWatch=document.querySelectorAll(".watch");
@@ -33,21 +35,44 @@ item.style.display="none";
 
 
 
-addToCart.forEach(function(button){
+addToCart.forEach(function(btn){
 
 
-button.addEventListener("click", function(e){
+btn.addEventListener("click", function(e){
 
 e.preventDefault();
 
-button.innerHTML="Item added";
+btn.innerHTML="Item added";
 
-button.style.background="yellow";
+btn.style.background="yellow";
 
 
 
 
 })
+})
+
+sumbitBtn.addEventListener("click", function(e){
+
+e.preventDefault();
+
+alert("Thank you for contacting us. One of our customer service represenatatives will reach out to you shortly")
+
+
+inputfield.forEach((inputara=>{
+
+
+    inputara.value="";
+
+}))
+
+
+
+
+
+
+
+
 })
 
 
